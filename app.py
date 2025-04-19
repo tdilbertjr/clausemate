@@ -20,17 +20,18 @@ st.markdown(
     f"""
     <style>
     .stApp {{
-        background-color: #766759;
-        background-image: url("data:image/png;base64,{img_data}");
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-position: 85% 30%;
-        background-size: 55%;
+        background-color: #766759 !important;
+        background-image: url("data:image/png;base64,{img_data}") !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        background-position: 85% 30% !important;
+        background-size: 55% !important;
     }}
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # --- Fixed Header Logo (Fallback Method) ---
 from PIL import Image
