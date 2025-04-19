@@ -162,4 +162,4 @@ if uploaded_file:
 
 # --- Footer ---
 st.markdown("---")
-st.caption("✨ Built by Terry Dilbert · Veteran | Future Legal Strategist")
+st.caption("🧪 Experimental legal AI project · Created by Terry Dilbert")
