@@ -46,7 +46,7 @@ st.markdown(
 
 # Render the logo using st.image() inside custom div
 st.markdown('<div class="logo-container">', unsafe_allow_html=True)
-st.image(logo, width=160)
+st.image(logo, width=300)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Spacer to avoid overlap
