@@ -80,10 +80,23 @@ def extract_text_from_pdf(file):
 
 text = ""
 if uploaded_file:
-    if uploaded_file.name.endswith(".pdf"):
-        text = extract_text_from_pdf(uploaded_file)
-    elif uploaded_file.name.endswith(".txt"):
-        text = uploaded_file.read().decode("utf-8")
+    st.success("✅ File uploaded successfully")
+    st.info(f"📄 Detected file type: {uploaded_file.name}")
+
+    try:
+        if uploaded_file.name.endswith(".pdf"):
+            st.info("📘 Extracting PDF text...")
+            text = extract_text_from_pdf(uploaded_file)
+        elif uploaded_file.name.endswith(".txt"):
+            st.info("📄 Extracting TXT text...")
+            text = uploaded_file.read().decode("utf-8")
+        else:
+            st.warning("⚠️ Unsupported file type.")
+    except Exception as e:
+        st.error(f"❌ Error reading file: {e}")
+
+    if text.strip() == "":
+        st.warning("⚠️ No text extracted from the file.")
 
     st.text_area("Extracted Text", text, height=200)
 
@@ -98,10 +111,10 @@ if uploaded_file:
                     ]
                 )
                 summary = response.choices[0].message.content
-                st.success("Summary:")
+                st.success("📝 Summary:")
                 st.write(summary)
             except Exception as e:
-                st.error(f"Error: {e}")
+                st.error(f"❌ Error: {e}")
 
     st.markdown("---")
     st.subheader("Ask a Question")
@@ -119,10 +132,11 @@ if uploaded_file:
                     ]
                 )
                 answer = response.choices[0].message.content
-                st.success("Answer:")
+                st.success("🧠 Answer:")
                 st.write(answer)
             except Exception as e:
-                st.error(f"Error: {e}")
+                st.error(f"❌ Error: {e}")
+
 
 # --- Footer ---
 st.markdown("---")
