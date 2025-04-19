@@ -17,35 +17,8 @@ st.set_page_config(page_title="Clausemate", layout="wide")
 st.markdown(
     """
     <style>
-    .stApp {
+    body {
         background-color: #1E0815;
-        color: #F1EBF0;
-    }
-
-    .stTextArea textarea {
-        background-color: #060103 !important;
-        color: #F1EBF0 !important;
-        border-radius: 6px;
-        border: 1px solid #262125;
-    }
-
-    .stFileUploader {
-        background-color: #210214 !important;
-        border-radius: 8px;
-    }
-
-    .stButton>button {
-        background-color: #482A3B;
-        color: white;
-        border-radius: 8px;
-        padding: 0.6em 1.2em;
-        font-weight: 600;
-        border: none;
-    }
-
-    .stButton>button:hover {
-        background-color: #262125;
-        color: #FFDDEE;
     }
     </style>
     """,
@@ -61,7 +34,7 @@ st.markdown(
     @media (max-width: 768px) {{
         .bg-art {{
             top: 80px !important;
-            right: 5px !important;
+            right: .50px !important;
             width: 400px !important;
         }}
     }}
@@ -80,6 +53,23 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+st.markdown("""
+    <style>
+    .stButton>button {
+        background-color: #482A3B;
+        color: white;
+        border-radius: 8px;
+        padding: 0.6em 1.2em;
+        font-weight: 600;
+        border: none;
+    }
+    .stButton>button:hover {
+        background-color: #262125;
+        color: #FFDDEE;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # --- Fixed Header Logo (Fallback Method) ---
 from PIL import Image
