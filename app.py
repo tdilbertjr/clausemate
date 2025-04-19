@@ -19,16 +19,16 @@ img_data = """iVBORw0KGgoAAAANSUhEUgAABgAAAAQACAYAAAAncZJCAACuxWNhQlgAAK7FanVtYg
 st.markdown(
     f"""
     <style>
-    html, body {{
+    .stApp {{
         background-color: #766759 !important;
         background-image: url("data:image/png;base64,{img_data}");
         background-repeat: no-repeat;
-        background-attachment: scroll !important;
-        background-position: 85% 4%;
+        background-position: 85% 40%;
         background-size: 55%;
+        background-attachment: scroll !important;
     }}
-    .stApp {{
-        background: none !important;
+    html, body {{
+        height: auto !important;
     }}
     </style>
     """,
