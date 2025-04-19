@@ -18,7 +18,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #766759;
+        background-color: #1E0815;
     }
     </style>
     """,
@@ -53,6 +53,23 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+st.markdown("""
+    <style>
+    .stButton>button {
+        background-color: #482A3B;
+        color: white;
+        border-radius: 8px;
+        padding: 0.6em 1.2em;
+        font-weight: 600;
+        border: none;
+    }
+    .stButton>button:hover {
+        background-color: #262125;
+        color: #FFDDEE;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # --- Fixed Header Logo (Fallback Method) ---
 from PIL import Image
