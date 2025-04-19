@@ -24,9 +24,9 @@ st.markdown(
         background-image: url("data:image/png;base64,{img_data}");
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position: top right;
-        background-size: 40%;
-        padding-top: 6rem;
+        background-position: right 1rem bottom;
+        background-position-y: 8rem;
+        background-size: 65%;
     }}
     </style>
     """,
