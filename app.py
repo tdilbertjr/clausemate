@@ -34,7 +34,7 @@ st.markdown(
     @media (max-width: 768px) {{
         .bg-art {{
             top: 80px !important;
-            right: 3px !important;
+            right: .50px !important;
             width: 400px !important;
         }}
     }}
@@ -43,7 +43,7 @@ st.markdown(
     <div class="bg-art" style="
         position: absolute;
         top: 50px;
-        right: 6px;
+        right: 1px;
         width: 780px;
         z-index: 0;
         opacity: 1;
