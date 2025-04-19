@@ -24,13 +24,15 @@ st.markdown(
         background-image: url("data:image/png;base64,{img_data}");
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position: bottom right;
-        background-size: 50%;
+        background-position: top right;
+        background-size: 40%;
+        padding-top: 6rem;
     }}
     </style>
     """,
     unsafe_allow_html=True
 )
+
 # --- Fixed Header Logo (Fallback Method) ---
 from PIL import Image
 logo = Image.open("Logo.png")
