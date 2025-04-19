@@ -32,9 +32,9 @@ st.markdown(
     f"""
     <div style="
         position: absolute;
-        top: 140px;
+        top: 80px;
         right: 30px;
-        width: 580px;
+        width: 720px;
         z-index: 0;
         opacity: 1;
     ">
