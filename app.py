@@ -24,7 +24,7 @@ st.markdown(
         background-image: url("data:image/png;base64,{img_data}");
         background-repeat: no-repeat;
         background-attachment: scroll !important;
-        background-position: 85% 15%;
+        background-position: 85% 4%;
         background-size: 55%;
     }}
     .stApp {{
