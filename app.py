@@ -24,16 +24,33 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Fixed Header Logo ---
+# --- Fixed Header Logo (Fallback Method) ---
+from PIL import Image
+logo = Image.open("Logo.png")
+
 st.markdown(
     """
-    <div style="position: fixed; top: 1.5rem; left: 2rem; z-index: 999;">
-        <img src="https://raw.githubusercontent.com/tdilbertjr/clausemate/main/Logo.png" width="160">
-    </div>
+    <style>
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 1.2rem;
+            left: 1.5rem;
+            z-index: 999;
+        }
+    </style>
     """,
     unsafe_allow_html=True
 )
-st.markdown("<br><br><br><br>", unsafe_allow_html=True)  # Spacer under logo
+
+# Render the logo using st.image() inside custom div
+st.markdown('<div class="logo-container">', unsafe_allow_html=True)
+st.image(logo, width=160)
+st.markdown('</div>', unsafe_allow_html=True)
+
+# Spacer to avoid overlap
+st.markdown("<br><br><br><br><br>", unsafe_allow_html=True)
 
 
 # --- Title & Description ---
