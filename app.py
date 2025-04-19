@@ -33,18 +33,18 @@ st.markdown(
     <style>
     @media (max-width: 768px) {{
         .bg-art {{
-            top: 60px !important;
+            top: 80px !important;
             right: 15px !important;
-            width: 350px !important;
+            width: 400px !important;
         }}
     }}
     </style>
 
     <div class="bg-art" style="
         position: absolute;
-        top: 20px;
+        top: 50px;
         right: 30px;
-        width: 720px;
+        width: 780px;
         z-index: 0;
         opacity: 1;
     ">
