@@ -23,7 +23,7 @@ st.markdown(
         background-color: #766759;
         background-image: url("data:image/png;base64,{img_data}");
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-position: 85% 30%;
         background-size: 55%;
     }}
