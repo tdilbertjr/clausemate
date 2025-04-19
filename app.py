@@ -12,34 +12,21 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Streamlit page config
 st.set_page_config(page_title="Clausemate", layout="wide")
 
-# Set background image via CSS
+# Unified background styling (color + image)
 st.markdown(
     """
     <style>
     .stApp {
+        background-color: #766759;
         background-image: url("Clausemate_BG.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: bottom right;
         background-size: 50%;
-        opacity: 1;
-        z-index: -1;
     }
     </style>
     """,
     unsafe_allow_html=True
-)
-
-# Custom background color (brand color)
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #766759;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
 )
 
 # --- Fixed Header Logo (Fallback Method) ---
