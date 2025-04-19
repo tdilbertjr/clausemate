@@ -146,7 +146,8 @@ if uploaded_file:
     if text.strip() == "":
         st.warning("⚠️ No text extracted from the file.")
 
-    st.text_area("Extracted Text", text, height=200)
+    # Skip displaying the raw extracted text
+    # st.text_area("Extracted Text", text, height=200)
 
     if st.button("Summarize Document"):
         with st.spinner("Summarizing..."):
