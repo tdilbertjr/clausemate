@@ -1,20 +1,50 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
 import fitz  # PyMuPDF
 from openai import OpenAI
 
+from dotenv import load_dotenv
 load_dotenv()
 
-# Load your OpenAI key
+# Load OpenAI key
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-st.set_page_config(page_title="Clausemate", layout="centered")
+# Streamlit page config
+st.set_page_config(page_title="Clausemate", layout="wide")
 
-st.title("📄 Clausemate")
-st.subheader("Your Legal Document Copilot – Summarize and Interact with Contracts using AI")
+# Custom background color (brand color)
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #766759;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-uploaded_file = st.file_uploader("Upload a legal document (.txt or .pdf)", type=["txt", "pdf"])
+# --- Fixed Header Logo ---
+st.markdown(
+    """
+    <div style="position: fixed; top: 1.5rem; left: 2rem; z-index: 999;">
+        <img src="https://raw.githubusercontent.com/tdilbertjr/clausemate/main/Logo.png" width="160">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown("<br><br><br><br>", unsafe_allow_html=True)  # Spacer under logo
+
+
+# --- Title & Description ---
+st.title("Your Legal Copilot, Reinvented")
+st.markdown(
+    "Upload a contract or agreement, and Clausemate will break it down for you in plain English."
+)
+
+# --- File Uploader ---
+st.markdown("📎 Upload a legal document (.pdf or .txt)")
+uploaded_file = st.file_uploader(" ", type=["pdf", "txt"])
 
 def extract_text_from_pdf(file):
     text = ""
@@ -69,5 +99,6 @@ if uploaded_file:
             except Exception as e:
                 st.error(f"Error: {e}")
 
+# --- Footer ---
 st.markdown("---")
-st.caption("🔹 Built by Terry Dilbert · Veteran Technologist & Future Legal Strategist")
+st.caption("✨ Built by Terry Dilbert · Veteran Technologist & Future Legal Strategist")
