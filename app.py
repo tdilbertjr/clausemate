@@ -30,7 +30,17 @@ img_data = """iVBORw0KGgoAAAANSUhEUgAABgAAAAQACAYAAAAncZJCAACuxWNhQlgAAK7FanVtYg
 
 st.markdown(
     f"""
-    <div style="
+    <style>
+    @media (max-width: 768px) {{
+        .bg-art {{
+            top: 60px !important;
+            right: 15px !important;
+            width: 350px !important;
+        }}
+    }}
+    </style>
+
+    <div class="bg-art" style="
         position: absolute;
         top: 20px;
         right: 30px;
