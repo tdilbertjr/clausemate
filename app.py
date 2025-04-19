@@ -19,19 +19,21 @@ img_data = """iVBORw0KGgoAAAANSUhEUgAABgAAAAQACAYAAAAncZJCAACuxWNhQlgAAK7FanVtYg
 st.markdown(
     f"""
     <style>
-    .stApp {{
-        background-color: #766759;
+    html, body {{
+        background-color: #766759 !important;
         background-image: url("data:image/png;base64,{img_data}");
         background-repeat: no-repeat;
         background-attachment: scroll !important;
-        background-position: 85% 45% !important;
-        background-size: 55% !important;
+        background-position: 85% 4%;
+        background-size: 55%;
+    }}
+    .stApp {{
+        background: none !important;
     }}
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 # --- Fixed Header Logo (Fallback Method) ---
 from PIL import Image
